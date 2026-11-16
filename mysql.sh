@@ -31,7 +31,7 @@ validate(){
 echo "$(timestamp) [INFO] ==== Script started Execution =====" | tee -a $logs_file
 
 
-dnf module enable mysql:8.4 &>>logs_file 
+dnf module enable mysql:8.4 -y &>>logs_file 
 dnf install mysql-server -y  &>> $logs_file
 validate $? "Installing MySQL server"
 
