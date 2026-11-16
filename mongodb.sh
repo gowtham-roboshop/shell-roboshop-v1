@@ -18,9 +18,9 @@ mkdir -p $logs_folder
 validate(){
     if [ $1 -ne 0 ]
     then
-        echo "$(timestamp) [ERROR] ${2} ...${R}FAILED${N}" | tee -a $logs_file
+        echo -e "${2}..${R}FAILED${N}" | tee -a $logs_file
     else
-        echo -e "$(timestamp) [INFO] ${2}..${G}SUCCESS${N}" | tee -a $logs_file
+        echo -e "${2}..${G}SUCCESS${N}" | tee -a $logs_file
     fi
 
 }
